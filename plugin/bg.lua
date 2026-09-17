@@ -24,7 +24,7 @@ local update = function()
 	local normal = vim.api.nvim_get_hl_by_name("Normal", true)
 	local bg = normal["background"]
 	local fg = normal["foreground"]
-	if bg == nil then
+	if bg == nil or fg == nil then
 		return reset()
 	end
 
